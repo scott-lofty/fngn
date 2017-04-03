@@ -1,6 +1,6 @@
-var mongoose = require("mongoose");
-
-var PlayerSchema = mongoose.Schema({
+var mongoose = require('mongoose');
+var TagSchema = require('./tagschema.js');
+var PlayerSchema = new mongoose.Schema({
     _id:String,
     name: String,
     address : String,
@@ -11,4 +11,4 @@ var PlayerSchema = mongoose.Schema({
     tags: [TagSchema]
 });
 
-var Player = mongoose.model("Player",PlayerSchema);
+module.exports =  mongoose.model("Player",PlayerSchema);
